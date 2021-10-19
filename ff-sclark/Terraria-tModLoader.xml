@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
-  <Name>Terraria-tModloader64</Name>
-  <Repository>ghcr.io/ff-sclark/terrariaserver:tmodloader64</Repository>
+  <Name>Terraria-tModloader</Name>
+  <Repository>ghcr.io/ff-sclark/terrariaserver:tmodloader</Repository>
   <Registry>https://ghcr.io/ff-sclark/terrariaserver</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/ff-sclark/docker-terraria-server/issues</Support>
-  <Project>https://github.com/Dradonhunter11/tModLoader64bit</Project>
-  <Overview>This Docker will download and install Terraria and the tModloader64 and run it.&#xD;
+  <Project>https://github.com/tModLoader/tModLoader</Project>
+  <Overview>This Docker will download and install Terraria, tModloader and optionally tModLoader64 and run it.&#xD;
 &#xD;
 ATTENTION: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#xD;
 &#xD;
@@ -24,7 +24,7 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <Description>This Docker will download and install Terraria and the tModloader64 and run it.&#xD;
+  <Description>This Docker will download and install Terraria, tModloader and optionally tModLoader64 and run it.&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
 &#xD;
@@ -65,6 +65,16 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
       <Mode/>
     </Variable>
     <Variable>
+      <Value>true</Value>
+      <Name>ENABLE_WEBCONSOLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>ENABLE_TML64</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>99</Value>
       <Name>UID</Name>
       <Mode/>
@@ -81,6 +91,8 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-config serverconfig.txt</Config>
   <Config Name="TCP - Game Port" Target="7777" Default="" Mode="tcp" Description="Container Port: 7777" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
   <Config Name="TCP - Console Port" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the Terraria console by opening your browser and go to HOSTIP:9013 - eg: 192.168.1.1:9013 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9013</Config>
+  <Config Name="Enable Web Console" Target="ENABLE_WEBCONSOLE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Enable TML64" Target="ENABLE_TML64" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
