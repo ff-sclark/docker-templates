@@ -92,7 +92,7 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
   <Config Name="TCP - Game Port" Target="7777" Default="" Mode="tcp" Description="Container Port: 7777" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
   <Config Name="TCP - Console Port" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the Terraria console by opening your browser and go to HOSTIP:9013 - eg: 192.168.1.1:9013 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9013</Config>
   <Config Name="Enable Web Console" Target="ENABLE_WEBCONSOLE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-  <Config Name="Enable TML64" Target="ENABLE_TML64" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Enable TML64" Target="ENABLE_TML64" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
