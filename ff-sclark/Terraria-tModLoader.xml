@@ -48,7 +48,7 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/terraria/tmodloader64</HostDir>
+      <HostDir>/mnt/user/appdata/terraria/tmodloader</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
