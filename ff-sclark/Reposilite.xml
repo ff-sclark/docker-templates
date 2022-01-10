@@ -45,6 +45,6 @@
   </Environment>
   <Labels/>
   <Config Name="Data Files" Target="/app/data" Default="" Mode="rw" Description="Container Path: /app/data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/reposilite</Config>
-  <Config Name="TCP - Web Port" Target="80" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
-  <Config Name="JAVA_OPTS" Target="JAVA_OPTS" Default="" Mode="" Description="Optional parameters handed to the JVM." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TCP - Web Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="JAVA_OPTS" Target="JAVA_OPTS" Default="" Mode="" Description="Optional parameters handed to the JVM." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
 </Container>
