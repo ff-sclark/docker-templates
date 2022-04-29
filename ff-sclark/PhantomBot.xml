@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>PhantomBot</Name>
+  <Repository>ghcr.io/phantombot/phantombot</Repository>
+  <Registry>https://github.com/phantombot/PhantomBot/pkgs/container/phantombot</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/PhantomBot/PhantomBot/issues</Support>
+  <Project>https://github.com/PhantomBot/PhantomBot</Project>
+  <Overview>PhantomBot is an actively developed open source interactive Twitch bot with a vibrant community that provides entertainment and moderation for your channel, allowing you to focus on what matters the most to you - your game and your viewers.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://phantombot.github.io/PhantomBot/common/images/logo.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <Description>PhantomBot is an actively developed open source interactive Twitch bot with a vibrant community that provides entertainment and moderation for your channel, allowing you to focus on what matters the most to you - your game and your viewers.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25000</HostPort>
+        <ContainerPort>25000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/phantombot</HostDir>
+      <ContainerDir>/opt/PhantomBot_data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Name>PHANTOMBOT_USER</Name>
+      <Value>BotUsername</Value>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>PHANTOMBOT_OAUTH</Name>
+      <Value></Value>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>PHANTOMBOT_CHANNEL</Name>
+      <Value>ChannelUsername</Value>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>PHANTOMBOT_PANELUSER</Name>
+      <Value>admin</Value>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Name>PHANTOMBOT_PANELPASSWORD</Name>
+      <Value>password</Value>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="PhantomBot User" Target="PHANTOMBOT_USER" Default="" Mode="" Description="Twitch bot username" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PhantomBot OAuth" Target="PHANTOMBOT_OAUTH" Default="" Mode="" Description="Twitch OAuth token (https://phantombot.github.io/PhantomBot/oauth/)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PhantomBot Channel" Target="PHANTOMBOT_CHANNEL" Default="" Mode="" Description="Twitch caster channel name" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PhantomBot Panel User" Target="PHANTOMBOT_PANELUSER" Default="" Mode="" Description="Web interface username" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PhantomBot Panel Password" Target="PHANTOMBOT_PANELPASSWORD" Default="" Mode="" Description="Web interface password" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+</Container>
