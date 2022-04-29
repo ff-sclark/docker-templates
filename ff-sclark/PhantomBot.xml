@@ -69,6 +69,7 @@
     </Variable>
   </Environment>
   <Labels/>
+  <Config Name="Data Files" Target="/opt/PhantomBot_data" Default="/mnt/user/appdata/phantombot" Type="Path" Mode="rw" Description="The data storage location for PhantomBot." Required="true">/mnt/user/appdata/phantombot</Config>
   <Config Name="Web Interface Port" Target="25000" Default="25000" Mode="tcp" Description="The port to access the PhantomBot interface" Type="Port" Display="always" Required="true">25000</Config>
   <Config Name="PhantomBot User" Target="PHANTOMBOT_USER" Default="BotUsername" Mode="" Description="Twitch bot username" Type="Variable" Display="always" Required="true" Mask="false">BotUsername</Config>
   <Config Name="PhantomBot OAuth" Target="PHANTOMBOT_OAUTH" Default="" Mode="" Description="Twitch OAuth token (https://phantombot.github.io/PhantomBot/oauth/)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
