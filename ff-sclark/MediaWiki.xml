@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MediaWiki</Name>
+  <Repository>ghcr.io/ff-sclark/mediawiki:1.37</Repository>
+  <Registry>https://hub.docker.com/r/dzikoysk/reposilite</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ff-sclark/docker-mediawiki/issues</Support>
+  <Project>https://github.com/ff-sclark/docker-mediawiki</Project>
+  <Overview>Standalone MediaWiki installation running on Alpine, Nginx, PHP-FPM, and S6-overlay</Overview>
+  <Category>Cloud: Productivity: Tools: Network:Web:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ff-sclark/docker-mediawiki/1.37/assets/mediawiki-icon.svg</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <Description>Standalone MediaWiki installation running on Alpine, Nginx, PHP-FPM, and S6-overlay</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mediawiki</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Labels/>
+  <Config Name="Data Files" Target="/app/data" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mediawiki</Config>
+  <Config Name="TCP - Web Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+</Container>
